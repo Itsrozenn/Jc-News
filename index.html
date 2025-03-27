@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JC News - Global Updates</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>JC News</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><button class="category-button" onclick="filterNews('world')">World</button></li>
+                <li><button class="category-button" onclick="filterNews('politics')">Politics</button></li>
+                <li><button class="category-button" onclick="filterNews('economy')">Economy</button></li>
+                <li><button class="category-button" onclick="filterNews('international')">International</button></li>
+                <li><button class="category-button" onclick="filterNews('sports')">Sports</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- World Section -->
+        <section id="world" class="news-section category">
+            <h2>World News</h2>
+            <div class="news-card">
+                <img src="large_Tp_4dTOX5oKVLIKPo21CRZlnYvpKoVqW0T0avOsY1cI.jpg" alt="World News" class="news-image">
+                <div class="news-content">
+                    <h3>Global Trade Fragmentation: OECD Warns of Slow Growth</h3>
+                    <p>The OECD has warned that the ongoing trade fragmentation is expected to slow down global economic growth. With nations pursuing protectionist policies, this shift is leading to more complex trade relationships...</p>
+                    <a href="https://www.weforum.org/stories/2025/03/oecd-warns-trade-fragmentation-slow-growth-other-international-trade-news-to-read-this-month/" target="_blank">Read more</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Politics Section -->
+        <section id="politics" class="news-section category">
+            <h2>Politics News</h2>
+            <div class="news-card">
+                <img src="305691-1468x710.jpg" alt="Politics News" class="news-image">
+                <div class="news-content">
+                    <h3>Former Philippine President Duterte’s Arrest: A Monumental Step for Justice</h3>
+                    <p>In a major legal development, former Philippine President Duterte faces an arrest order over alleged human rights abuses during his time in office. Amnesty International has hailed the move as a step forward for justice...</p>
+                    <a href="https://www.amnesty.org/en/latest/news/2025/03/philippines-former-president-dutertes-arrest-a-monumental-step-for-justice/" target="_blank">Read more</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Economy Section -->
+        <section id="economy" class="news-section category">
+            <h2>Economy News</h2>
+            <div class="news-card">
+                <img src="media_185e7ef2a66b008dccce6898425fe31295e149d31.webp" alt="Economy News" class="news-image">
+                <div class="news-content">
+                    <h3>World Bank Focuses on Sustainable Growth for Emerging Economies</h3>
+                    <p>The World Bank has released its annual report outlining strategies for sustainable growth in emerging markets. With a focus on green initiatives and innovation, the bank aims to assist developing nations in achieving long-term economic stability...</p>
+                    <a href="https://www.worldbank.org/ext/en/home" target="_blank">Read more</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- International Section -->
+        <section id="international" class="news-section category">
+            <h2>International News</h2>
+            <div class="news-card">
+                <img src="download.jpg" alt="International News" class="news-image">
+                <div class="news-content">
+                    <h3>Greenland Politics: Danish PM Discusses U.S. Relations Amid Trump’s Influence</h3>
+                    <p>The Prime Minister of Denmark, Mette Frederiksen, met with U.S. officials to discuss future political relations. The implications of former President Trump's policies on Greenland and the Arctic are becoming an increasingly important topic for international diplomacy...</p>
+                    <a href="https://www.politico.com/news/2025/03/26/danish-pm-greenland-trump-vance-00253034" target="_blank">Read more</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sports Section -->
+        <section id="sports" class="news-section category">
+            <h2>Sports News</h2>
+            <div class="news-card">
+                <img src="hotkjfhpqbaiv3k7apzg.png" alt="Sports News" class="news-image">
+                <div class="news-content">
+                    <h3>Utah Royals FC Acquires International Spot in Trade with KC Current</h3>
+                    <p>In a groundbreaking trade, Utah Royals FC has secured an international spot from the KC Current. This marks an exciting development for the team as they look to bolster their roster ahead of the next season...</p>
+                    <a href="https://www.rsl.com/utahroyals/news/urfc-acquires-international-spot-in-trade-with-kc-current" target="_blank">Read more</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 JC News. All rights reserved.</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com" target="_blank" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.youtube.com" target="_blank" class="social-icon"><i class="fab fa-youtube"></i></a>
+        </div>
+    </footer>
+
+    <script>
+        // Function to filter and display news based on category
+        function filterNews(category) {
+            // Get all news sections
+            const sections = document.querySelectorAll('.category');
+
+            // Hide all sections
+            sections.forEach(function(section) {
+                section.style.display = 'none';
+            });
+
+            // Show the selected category section
+            const selectedSection = document.getElementById(category);
+            selectedSection.style.display = 'block';
+        }
+
+        // Initially show all categories
+        window.onload = function() {
+            filterNews('world'); // Default to showing World news
+        };
+    </script>
+</body>
+</html>
